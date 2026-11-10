@@ -1,6 +1,6 @@
 # Low-Level Design (LLD)
 
-**Status:** Draft — not approved
+**Status:** Draft - not approved
 
 ## Component contracts
 [API paths, inputs/outputs, authentication, errors]
