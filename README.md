@@ -1,7 +1,7 @@
 # SPECTION
 
 <p align="center">
-  <img src="assets/brand/spection-banner.svg" alt="SPECTION — AI-guided software engineering framework: Specify, Architect, Build, Validate, Evolve" width="100%" />
+  <img src="assets/brand/spection-banner.svg" alt="SPECTION - AI-guided software engineering framework: Specify, Architect, Build, Validate, Evolve" width="100%" />
 </p>
 
 <p align="center">
@@ -66,7 +66,7 @@ flowchart TD
 - `prompts/`: guided workflows for project setup and features
 - `.github/workflows/`: automated Markdown structure checks
 
-## SPECTION Kit — executable toolkit
+## SPECTION Kit - executable toolkit
 
 The [SPECTION Kit](kit/README.md) adds a local, standard-library Python CLI, guided software-engineering workflows, architecture references, security/ethics templates and tests.
 
