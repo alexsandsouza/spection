@@ -1,6 +1,6 @@
 # High-Level Design (HLD)
 
-**Status:** Draft — not approved
+**Status:** Draft - not approved
 
 ## Context and boundaries
 [Users, components, external systems, trust boundaries]
