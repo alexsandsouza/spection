@@ -1,4 +1,4 @@
-# Product Brief — Template
+# Product Brief - Template
 
 - **Project name:**
 - **Owner / sponsor:**
