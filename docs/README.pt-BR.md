@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="../assets/brand/spection-banner.svg" alt="SPECTION — Framework de Engenharia de Software Guiada por IA" width="100%" />
+<img src="../assets/brand/spection-banner.svg" alt="SPECTION - Framework de Engenharia de Software Guiada por IA" width="100%" />
 
 # SPECTION
 ### Da ideia validada ao software verificável.
@@ -169,7 +169,7 @@ Sugestões e contribuições são bem-vindas. Consulte [CONTRIBUTING.md](../CONT
 
 ## Autor, licença e atribuição
 
-**Alexsand Farias de Souza** — professor universitário, desenvolvedor Full Stack e criador do SPECTION.
+**Alexsand Farias de Souza** - professor universitário, desenvolvedor Full Stack e criador do SPECTION.
 
 [Portfólio](https://alexsandsouza.github.io/) · [GitHub](https://github.com/alexsandsouza) · [LinkedIn](https://www.linkedin.com/in/alexsandfarias)
 
