@@ -1,4 +1,4 @@
-# FEAT-PORTAL-001 — Documentation portal
+# FEAT-PORTAL-001 - Documentation portal
 
 Status: Draft, implementation started; human acceptance pending.
 
