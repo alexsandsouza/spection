@@ -1,6 +1,6 @@
 # SPECTION Kit Changelog
 
-## Unreleased — v0.2 foundation
+## Unreleased - v0.2 foundation
 
 - Added offline Python standard-library CLI: `init`, `feature`, `doctor`, `check`.
 - Created SDD templates, workflow guides and security/ethics documentation.
