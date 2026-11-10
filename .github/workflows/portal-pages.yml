@@ -30,6 +30,8 @@ jobs:
       - name: Typecheck
         working-directory: site
         run: npm run typecheck
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site/out
