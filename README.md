@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/brand/spection-banner.svg" alt="SPECTION — AI-Guided Software Engineering Framework" width="100%" />
+<img src="assets/brand/spection-banner.svg" alt="SPECTION - AI-Guided Software Engineering Framework" width="100%" />
 
 # SPECTION
 ### From validated ideas to verifiable software.
@@ -69,7 +69,7 @@ flowchart LR
 
 The workflow is **iterative, not a mandatory waterfall**. Small changes can use lightweight documentation; higher-risk changes require deeper review.
 
-## Quick start — offline, without API keys
+## Quick start - offline, without API keys
 
 **Requirements:** Git and Python 3.10 or newer.
 
@@ -186,7 +186,7 @@ Contributions, examples and constructive feedback are welcome. Read [CONTRIBUTIN
 
 ## Author, license and attribution
 
-**Alexsand Farias de Souza** — university professor, Full Stack developer and creator of SPECTION.
+**Alexsand Farias de Souza** - university professor, Full Stack developer and creator of SPECTION.
 
 [Portfolio](https://alexsandsouza.github.io/) · [GitHub](https://github.com/alexsandsouza) · [LinkedIn](https://www.linkedin.com/in/alexsandfarias)
 
