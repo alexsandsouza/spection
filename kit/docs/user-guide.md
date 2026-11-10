@@ -1,4 +1,4 @@
-# SPECTION Kit — Practical developer guide
+# SPECTION Kit - Practical developer guide
 
 ## Who should use it?
 
