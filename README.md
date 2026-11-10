@@ -1,87 +1,77 @@
+<div align="center">
+
+<img src="assets/brand/spection-banner.svg" alt="SPECTION — AI-Guided Software Engineering Framework" width="100%" />
+
 # SPECTION
+### From validated ideas to verifiable software.
 
-**Official website:** https://alexsandsouza.github.io/spection/
+**An open-source, vendor-neutral framework for specification-driven, AI-assisted software engineering.**
 
-<p align="center">
-  <img src="assets/brand/spection-banner.svg" alt="SPECTION - AI-guided software engineering framework: Specify, Architect, Build, Validate, Evolve" width="100%" />
-</p>
+[![License: MIT](https://img.shields.io/badge/License-MIT-6ee7f5?style=flat-square)](LICENSE)
+![Foundation](https://img.shields.io/badge/Release-v0.2%20foundation-8067ef?style=flat-square)
+![Python](https://img.shields.io/badge/CLI-Python%203.10%2B-3975ac?style=flat-square)
+![Offline](https://img.shields.io/badge/Kit-offline-18334d?style=flat-square)
 
-<p align="center">
-  <a href="kit/README.md">Getting Started</a> ·
-  <a href="docs/framework-guide.md">Concepts</a> ·
-  <a href="docs/developer-guide.md">Manual</a> ·
-  <a href="examples/README.md">Examples</a> ·
-  <a href=".agents/skills/">Skills</a> ·
-  <a href="docs/ethical-use.md">Responsible AI</a> ·
-  <a href="docs/README.pt-BR.md">Português</a>
-</p>
+**[🌐 Website](https://alexsandsouza.github.io/spection/)** · **[🚀 Get started](kit/README.md)** · **[📘 Documentation](docs/framework-guide.md)** · **[🇧🇷 Português](docs/README.pt-BR.md)**
 
+</div>
 
-**AI-Guided Software Engineering Framework**
+---
 
-> Specify. Architect. Build. Validate. Evolve.
+> **Specify → Architect → Build → Validate → Evolve.**  
+> AI accelerates work; people remain accountable for decisions, verification and release.
 
-SPECTION is an open-source, technology-agnostic framework to guide developers through the entire software development lifecycle using **Spec-Driven Development (SDD)**, **Harness Engineering**, reusable **Agent Skills**, traceable documentation and human-reviewed quality gates.
+SPECTION connects **Spec-Driven Development (SDD)**, **Harness Engineering**, reusable **Agent Skills**, traceable artifacts and human-reviewed quality gates. It supports conventional software and AI-enabled applications without locking teams into a specific model, editor or programming language.
 
-**Author:** Alexsand Farias de Souza · **License:** MIT · **Status:** v0.2 foundation (documentation and offline CLI, not yet a hosted application).
+### Explore SPECTION
 
-## Start here
+| Explore | Learn | Build | Trust |
+|:--|:--|:--|:--|
+| [Official portal](https://alexsandsouza.github.io/spection/) | [Framework concepts](docs/framework-guide.md) | [SPECTION Kit](kit/README.md) | [Responsible AI](docs/ethical-use.md) |
+| [Roadmap](docs/roadmap.md) | [Developer manual](docs/developer-guide.md) | [Practical examples](examples/README.md) | [Security & privacy](kit/docs/security-ethics.md) |
+| [Português](docs/README.pt-BR.md) | [Glossary](GLOSSARY.md) | [Agent Skills](.agents/skills/) | [License & attribution](COPYRIGHT.md) |
 
-| I want to... | Go to |
-|---|---|
-| Explore the official portal | [SPECTION website](https://alexsandsouza.github.io/spection/) |
-| Bootstrap a software project | [SPECTION Kit](kit/README.md) |
-| Learn the methodology | [Framework guide](docs/framework-guide.md) |
-| Build a practical example | [Developer guide](docs/developer-guide.md) |
-| Review safety and ethics | [Responsible use](docs/ethical-use.md) |
-| Learn in Portuguese | [Guia PT-BR](docs/README.pt-BR.md) |
+## Why SPECTION?
 
-## How it works
+Code generation alone does not validate a product idea, clarify ambiguous requirements or prove that software works. SPECTION gives teams a repeatable route from **problem → specification → architecture → implementation → evidence**.
+
+- **Specification first:** define the problem, measurable outcomes and testable acceptance criteria before coding.
+- **Human control:** require approval for consequential decisions, destructive actions and production release.
+- **Traceability:** link requirements, decisions, tasks, tests and actual evidence.
+- **No fabricated verification:** never claim a test passed without running it.
+- **Security and privacy by design:** keep secrets and sensitive information out of commits and unapproved model contexts.
+- **Vendor neutrality:** use compatible agents, languages, IDEs and deployment environments.
+- **Reviewable changes:** record meaningful design trade-offs in ADRs.
+
+## The seven-stage workflow
 
 ```mermaid
-flowchart TD
-  A[Idea & Product Brief] --> B[Requirements & PRD]
-  B --> C[Architecture HLD & ADRs]
-  C --> D[Detailed Design LLD]
-  D --> E[Feature Specifications]
-  E --> F[Plan & Tasks]
-  F --> G[Implementation]
-  G --> H{Tests & Review}
-  H -->|Changes needed| E
-  H -->|Approved| I[Release & Monitoring]
-  I --> B
+flowchart LR
+    A["01 Discover<br/>Product Brief"] --> B["02 Specify<br/>PRD + acceptance"]
+    B --> C["03 Architect<br/>HLD + LLD + ADR"]
+    C --> D["04 Plan<br/>Feature spec + tasks"]
+    D --> E["05 Build<br/>Code + tests"]
+    E --> F{"06 Verify<br/>Evidence + review"}
+    F -->|Changes required| B
+    F -->|Human approval| G["07 Release<br/>Monitor + evolve"]
+    G -.->|Feedback| A
 ```
 
-## Core principles
+| Stage | Key question | Artifact / quality gate |
+|---|---|---|
+| **01 Discover** | What problem matters, and for whom? | Product Brief; problem and scope validated |
+| **02 Specify** | What must the system do? | PRD; testable RF/RNF and acceptance criteria |
+| **03 Architect** | How will we design it responsibly? | HLD, LLD, ADRs; trade-offs reviewed |
+| **04 Plan** | What should be implemented next? | Feature spec, plan and bounded tasks |
+| **05 Build** | Does implementation follow the approved spec? | Code, tests and reviewable changes |
+| **06 Verify** | What evidence demonstrates correctness? | Real test results, traceability, security review |
+| **07 Release** | Is delivery approved and reversible? | Release notes, rollback, monitoring, human approval |
 
-1. **Specification before implementation.** Do not invent product requirements.
-2. **Human control.** Get approval for high-impact decisions, destructive actions and production release.
-3. **Traceability.** Link requirements to decisions, tasks, tests and evidence.
-4. **No fabricated verification.** Never claim a test passed without executing it.
-5. **Security and privacy by design.** Never commit secrets or sensitive personal data.
-6. **Vendor independence.** Use any language, stack, IDE or compatible AI agent.
-7. **Reviewable change.** Record substantial design decisions with ADRs.
+The workflow is **iterative, not a mandatory waterfall**. Small changes can use lightweight documentation; higher-risk changes require deeper review.
 
-## Quick start
+## Quick start — offline, without API keys
 
-1. Complete [Product Brief](docs/product-brief.md) and [PRD](docs/prd.md).
-2. Document [HLD](docs/hld.md), [LLD](docs/lld.md), and [ADRs](docs/adr/0001-template.md).
-3. Copy the [feature template](specs/_template/feature-spec.md) into a numbered feature folder.
-4. Load [AGENTS.md](AGENTS.md) into your AI coding agent.
-5. Follow the skills in [`.agents/skills/`](.agents/skills/) and the corresponding prompts.
-6. Run the project's real tests; record evidence and obtain human review before release.
-
-## Repository layout
-
-- `docs/`: reusable product, architecture and traceability templates
-- `specs/_template/`: feature specifications, plans and tasks
-- `.agents/skills/`: role-oriented agent instructions
-- `prompts/`: guided workflows for project setup and features
-- `.github/workflows/`: automated Markdown structure checks
-
-## SPECTION Kit - executable toolkit
-
-The [SPECTION Kit](kit/README.md) adds a local, standard-library Python CLI, guided software-engineering workflows, architecture references, security/ethics templates and tests.
+**Requirements:** Git and Python 3.10 or newer.
 
 ```bash
 git clone https://github.com/alexsandsouza/spection.git
@@ -92,58 +82,124 @@ python kit/spection.py feature my-app account-login
 python kit/spection.py check my-app
 ```
 
-Learn from the [practical user guide](kit/docs/user-guide.md), inspect the [AI architecture diagram](kit/docs/architecture.md), review the [security and ethics guide](kit/docs/security-ethics.md), and select a [workflow](kit/workflows/README.md). The CLI works offline, creates local files only, and never invokes AI APIs or deploys your application. Checks are structural, not a substitute for functional tests or specialist audits.
+The CLI creates and checks **local files only**. It does **not** call AI APIs, execute your project's functional tests, or deploy software. Its checks are structural and do not replace specialist security reviews.
 
-## Why SPECTION?
+### Guided implementation with AI
 
-Build software around validated market needs, not generated code alone. SPECTION connects product discovery, architecture, implementation and verification. Reusable specifications and skills can reduce repeated context setup, ambiguity and rework; measure actual delivery time, defect rates and costs rather than assuming a guaranteed speedup.
+1. Complete the [Product Brief](docs/product-brief.md) and [PRD](docs/prd.md).
+2. Record [HLD](docs/hld.md), [LLD](docs/lld.md) and [ADRs](docs/adr/0001-template.md).
+3. Copy the [feature specification template](specs/_template/feature-spec.md) into a numbered feature folder.
+4. Provide [AGENTS.md](AGENTS.md), approved specs and the relevant [Agent Skills](.agents/skills/) to your coding assistant.
+5. Request a bounded plan before implementation; review incremental changes.
+6. Run real tests, preserve evidence and obtain human approval before release.
 
-## How to develop faster with AI
+**[Kit user guide](kit/docs/user-guide.md)** · **[Workflows](kit/workflows/README.md)** · **[Architecture reference](kit/docs/architecture.md)**
 
-Start with a small, valuable feature. Define acceptance criteria before coding; give your agent the approved context and relevant skill; ask for a bounded implementation plan; run real tests; review the evidence. Reuse the same process for features, bug fixes and releases.
+## The SPECTION ecosystem
 
-Read the [developer guide and worked example](docs/developer-guide.md).
+```mermaid
+flowchart TD
+    F["SPECTION Framework<br/>Method + quality gates"]
+    K["SPECTION Kit<br/>Offline Python CLI + templates"]
+    S["Agent Skills + AGENTS.md<br/>Bounded AI guidance"]
+    D["Specs + ADRs + traceability<br/>Versioned engineering artifacts"]
+    V["Tests + human review<br/>Evidence and release decisions"]
+    P["SPECTION Studio<br/>Planned interactive learning experience"]
+    F --> K
+    F --> S
+    F --> D
+    K --> D
+    S --> D
+    D --> V
+    P -.->|Future integration| K
+```
+
+| Component | What exists today |
+|---|---|
+| **Framework** | Methodology, lifecycle, templates and quality gates |
+| **Kit** | Local Python CLI, scaffolding, structural checks and workflows |
+| **Agent Skills** | Reusable guidance for AI coding assistants |
+| **Documentation portal** | Public website and guides |
+| **Studio** | **Planned**, not yet available as an interactive application |
+
+## Learn by building
+
+| Path | Focus | Start |
+|---|---|---|
+| **Booking API** | Requirements, transactions and concurrency | [Conventional application](examples/README.md#1-booking-api-conventional-software) |
+| **AI document assistant** | RAG, permissions and model evaluation | [AI application](examples/README.md#2-ai-document-assistant) |
+| **Existing application** | Incremental SDD adoption without a rewrite | [Brownfield workflow](examples/README.md#3-existing-application) |
+
+Explore the [examples catalog](examples/README.md) and the [worked developer guide](docs/developer-guide.md).
 
 ## Documentation hub
 
-| Guide | Purpose |
+| Resource | Purpose |
 |---|---|
-| [Framework guide](docs/framework-guide.md) | Lifecycle, harness engineering, roles and review gates |
-| [Developer guide](docs/developer-guide.md) | Installation, practical example, productivity and existing projects |
-| [SPECTION Kit](kit/README.md) | CLI, workflows and templates |
-| [AI reference architecture](kit/docs/architecture.md) | Optional models, agents, RAG and gateway |
+| [Framework guide](docs/framework-guide.md) | Lifecycle, roles, harness engineering and gates |
+| [Developer manual](docs/developer-guide.md) | Practical implementation and productivity |
+| [Kit](kit/README.md) | Commands, templates and local checks |
+| [Reference AI architecture](kit/docs/architecture.md) | Optional models, agents, RAG and gateways |
 | [Responsible development](docs/responsible-development.md) | Market alignment, security, ethics and privacy |
 | [Model evaluation](kit/docs/model-evaluation.md) | Quality, latency, cost and safety |
-| [Português](docs/README.pt-BR.md) | Guia de utilização em português |
+| [Portuguese guide](docs/README.pt-BR.md) | Complete getting-started guide in PT-BR |
 
-## Copyright, license and attribution
+## Repository map
 
-Copyright (c) 2026 Alexsand Farias de Souza. SPECTION is released under the [MIT License](LICENSE), allowing use, modification and distribution, including commercial use, subject to retaining the copyright and permission notice. See [Copyright and Attribution](COPYRIGHT.md) for third-party licensing, contributions, AI-assisted material and trademark guidance.
+```text
+spection/
+├── .agents/skills/       # Reusable AI agent instructions
+├── .github/workflows/    # Repository automation
+├── assets/brand/         # Brand identity
+├── docs/                 # Product, architecture and governance
+├── examples/             # Learning paths
+├── kit/                  # Offline CLI, workflows and checks
+├── prompts/              # Guided prompts
+├── site/                 # Next.js documentation portal
+├── specs/_template/      # Feature specs, plans and tasks
+├── AGENTS.md             # Agent operating guidance
+└── README.md             # Project overview
+```
 
-SPECTION is an independent project inspired by established software engineering practices and GitHub Spec Kit. It is not an official GitHub product or endorsed implementation.
+## Roadmap
 
-## Examples and learning paths
+- **Foundation (v0.2):** documentation, offline CLI, templates, examples and portal.
+- **Documentation experience:** bilingual navigation, clearer diagrams and visual onboarding.
+- **SPECTION Studio (planned):** interactive seven-stage walkthrough and a beginner portfolio project.
+- **Future integrations (proposals):** artifact export, traceability visualization and optional AI/GitHub integrations.
 
-- [Booking API: conventional software](examples/README.md#1-booking-api-conventional-software)
-- [AI document assistant: RAG and evaluation](examples/README.md#2-ai-document-assistant)
-- [Adopting SPECTION in existing applications](examples/README.md#3-existing-application)
+Track proposed work in the [roadmap](docs/roadmap.md). A roadmap item is not a shipped capability.
 
-See the [complete examples catalog](examples/README.md) and the [developer manual](docs/developer-guide.md).
+## Responsible engineering
 
-## Ethical and responsible use
+SPECTION prioritizes human accountability, accessibility, privacy, security, fairness, transparency and intellectual property. Review foreseeable harms, enforce least privilege and measure actual outcomes. **AI output is a draft until verified.**
 
-SPECTION prioritizes human accountability, privacy, security, accessibility, fairness, transparency and intellectual property. Use AI to assist engineering, not to bypass approval or fabricate evidence. Review foreseeable harms, enforce least privilege, measure actual results, and keep a human responsible for consequential decisions.
+Read the [ethical use guide](docs/ethical-use.md), [responsible development](docs/responsible-development.md) and [security guidance](kit/docs/security-ethics.md).
 
-Read the [Ethical and Responsible Use guide](docs/ethical-use.md), including the release checklist. These guidelines do not modify the MIT license.
+### Scope and limitations
 
-## Scope and limitations
+SPECTION v0.2 is a **starter framework with documentation, agent guidance and an offline CLI**. The public website is a documentation portal, **not a hosted software-building platform**. Markdown checks do not establish functional correctness, compliance or security certification. Potential productivity gains should be measured, not assumed.
 
-SPECTION is a **starter framework**: documentation, agent guidance and an offline CLI. It is not a deployed web platform, and its Markdown checks are not a substitute for executable tests or a security assessment.
+## Contribute
 
-## Contributing
+Contributions, examples and constructive feedback are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) and submit focused changes with acceptance criteria and reproducible evidence.
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md). All contributions must respect the MIT license and the project's human-review and evidence standards.
+## Author, license and attribution
 
-## Portuguese
+**Alexsand Farias de Souza** — university professor, Full Stack developer and creator of SPECTION.
 
-**SPECTION** é um framework aberto de engenharia de software orientada por especificações e guiada por IA. Comece pelo Product Brief, detalhe os requisitos, documente a arquitetura, defina tarefas e execute testes verificáveis antes de entregar.
+[Portfolio](https://alexsandsouza.github.io/) · [GitHub](https://github.com/alexsandsouza) · [LinkedIn](https://www.linkedin.com/in/alexsandfarias)
+
+Copyright © 2026 Alexsand Farias de Souza. Licensed under [MIT](LICENSE); retain copyright and permission notices when reusing the project. See [COPYRIGHT.md](COPYRIGHT.md) for attribution, AI-assisted content and third-party guidance.
+
+SPECTION is an independent project informed by established software engineering practices and GitHub Spec Kit. **It is not an official GitHub product or endorsed implementation.**
+
+---
+
+<div align="center">
+
+**Build deliberately. Verify with evidence. Evolve responsibly.**
+
+[Back to top](#spection) · [Português (Brasil)](docs/README.pt-BR.md) · [Official website](https://alexsandsouza.github.io/spection/)
+
+</div>
