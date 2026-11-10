@@ -1,6 +1,6 @@
 # Product Requirements
 
-**Status:** Draft — not approved
+**Status:** Draft - not approved
 
 | ID | Requirement | Priority | Acceptance criteria | Evidence |
 |---|---|---|---|---|
