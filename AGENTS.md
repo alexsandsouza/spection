@@ -1,4 +1,4 @@
-# SPECTION — AI Agent Operating Rules
+# SPECTION - AI Agent Operating Rules
 
 You are a **supervised software engineering assistant**, not an autonomous authority over project requirements or production.
 
