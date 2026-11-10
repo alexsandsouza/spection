@@ -1,0 +1,21 @@
+name: Documentation validation
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required documentation
+        shell: bash
+        run: |
+          set -euo pipefail
+          for f in README.md LICENSE AGENTS.md docs/product-brief.md docs/prd.md docs/hld.md docs/lld.md docs/traceability.md specs/_template/feature-spec.md specs/_template/plan.md specs/_template/tasks.md; do
+            test -s "$f" || { echo "Missing or empty: $f"; exit 1; }
+          done
+          echo "Required documentation files present."
