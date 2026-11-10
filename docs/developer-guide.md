@@ -1,4 +1,4 @@
-# Developer Guide — Accelerate software delivery with SPECTION
+# Developer Guide - Accelerate software delivery with SPECTION
 
 ## Installation and first project
 
