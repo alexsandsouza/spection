@@ -25,6 +25,17 @@ SPECTION is an open-source, technology-agnostic framework to guide developers th
 
 **Author:** Alexsand Farias de Souza · **License:** MIT · **Status:** v0.2 foundation (documentation and offline CLI, not yet a hosted application).
 
+## Start here
+
+| I want to... | Go to |
+|---|---|
+| Explore the official portal | [SPECTION website](https://alexsandsouza.github.io/spection/) |
+| Bootstrap a software project | [SPECTION Kit](kit/README.md) |
+| Learn the methodology | [Framework guide](docs/framework-guide.md) |
+| Build a practical example | [Developer guide](docs/developer-guide.md) |
+| Review safety and ethics | [Responsible use](docs/ethical-use.md) |
+| Learn in Portuguese | [Guia PT-BR](docs/README.pt-BR.md) |
+
 ## How it works
 
 ```mermaid
