@@ -24,3 +24,11 @@ Choose static Next.js + TypeScript to support future expansion; trade-off: depen
 
 ## Evidence
 Implementation files created; build and browser acceptance pending. No claim of deployed site.
+
+## Redesign 2.0
+RF-PORTAL-004: responsive sticky navigation, localized interface and persistent theme/language.
+RF-PORTAL-005: interactive workflow with stage details and links to manuals.
+RF-PORTAL-006: author, responsible AI, examples and roadmap sections.
+AC: keyboard-selectable stages; mobile layout without horizontal overflow; language preferences persist; links resolve under /spection; reduced motion respected.
+ADR: retain CSS and React instead of adding a UI framework to minimize dependencies and preserve static export.
+Verification plan: build, typecheck, inspect mobile/desktop, test navigation and controls. Results pending.
