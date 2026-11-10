@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import PrivacyPanel from "./privacy-panel";
 export const metadata: Metadata = {title:"SPECTION | AI-Guided Software Engineering",description:"Build verified software with specifications and responsible AI."};
-export default function Layout({children}:{children:React.ReactNode}) {return <html lang="en"><body>{children}</body></html>}
+export default function Layout({children}:{children:React.ReactNode}) {return <html lang="en"><body>{children}<PrivacyPanel/></body></html>}
