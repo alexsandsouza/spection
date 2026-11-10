@@ -9,7 +9,7 @@
 [Alternatives, evidence, cost and security]
 
 ## Decision
-[Chosen approach — pending review]
+[Chosen approach - pending review]
 
 ## Consequences
 [Trade-offs and triggers for revisit]
