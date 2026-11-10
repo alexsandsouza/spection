@@ -1,7 +1,7 @@
 # Product Brief
 
 **Project:** [PROJECT_NAME]
-**Status:** Draft — not approved
+**Status:** Draft - not approved
 
 ## Problem and evidence
 [Who needs what, why, and how the need was validated]
