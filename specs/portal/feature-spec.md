@@ -32,3 +32,6 @@ RF-PORTAL-006: author, responsible AI, examples and roadmap sections.
 AC: keyboard-selectable stages; mobile layout without horizontal overflow; language preferences persist; links resolve under /spection; reduced motion respected.
 ADR: retain CSS and React instead of adding a UI framework to minimize dependencies and preserve static export.
 Verification plan: build, typecheck, inspect mobile/desktop, test navigation and controls. Results pending.
+
+## Visual refinement
+Added a responsive onboarding section, expanded CLI quickstart, value proposition cards, interactive release-readiness self-assessment, grouped footer, and refined documentation layout. Preserve consent controls and existing author links. Acceptance: no horizontal overflow at narrow widths, keyboard-accessible controls, actual copy feedback, checklist updates without network transmission, and valid static-export links. Build and browser checks pending for this revision.
