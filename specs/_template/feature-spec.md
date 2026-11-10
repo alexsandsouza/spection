@@ -1,4 +1,4 @@
-# FEAT-001 — Feature Specification
+# FEAT-001 - Feature Specification
 
 - **Status:** Draft | Reviewed | Approved | Implemented | Verified
 - **Related requirements:** RF-001
