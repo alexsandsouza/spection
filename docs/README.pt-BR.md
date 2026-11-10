@@ -1,4 +1,4 @@
-# SPECTION — Guia em português
+# SPECTION - Guia em português
 
 SPECTION é um framework aberto de Engenharia de Software Guiada por IA. Seu objetivo é ajudar a desenvolver aplicações úteis, seguras, eficientes, éticas e responsáveis, com especificações versionadas e supervisão humana.
 
