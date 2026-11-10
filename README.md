@@ -51,6 +51,21 @@ flowchart TD
 - `prompts/`: guided workflows for project setup and features
 - `.github/workflows/`: automated Markdown structure checks
 
+## SPECTION Kit — executable toolkit
+
+The [SPECTION Kit](kit/README.md) adds a local, standard-library Python CLI, guided software-engineering workflows, architecture references, security/ethics templates and tests.
+
+```bash
+git clone https://github.com/alexsandsouza/spection.git
+cd spection
+python kit/spection.py init my-app
+python kit/spection.py doctor my-app
+python kit/spection.py feature my-app account-login
+python kit/spection.py check my-app
+```
+
+Learn from the [practical user guide](kit/docs/user-guide.md), inspect the [AI architecture diagram](kit/docs/architecture.md), review the [security and ethics guide](kit/docs/security-ethics.md), and select a [workflow](kit/workflows/README.md). The CLI works offline, creates local files only, and never invokes AI APIs or deploys your application. Checks are structural, not a substitute for functional tests or specialist audits.
+
 ## Scope and limitations
 
 SPECTION v0.1 is a **starter framework**: documentation and agent guidance. It is not a deployed web platform, and its Markdown checks are not a substitute for executable tests or a security assessment.
