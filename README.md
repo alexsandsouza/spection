@@ -1,5 +1,20 @@
 # SPECTION
 
+<p align="center">
+  <img src="assets/brand/spection-banner.svg" alt="SPECTION — AI-guided software engineering framework: Specify, Architect, Build, Validate, Evolve" width="100%" />
+</p>
+
+<p align="center">
+  <a href="kit/README.md">Getting Started</a> ·
+  <a href="docs/framework-guide.md">Concepts</a> ·
+  <a href="docs/developer-guide.md">Manual</a> ·
+  <a href="examples/README.md">Examples</a> ·
+  <a href=".agents/skills/">Skills</a> ·
+  <a href="docs/ethical-use.md">Responsible AI</a> ·
+  <a href="docs/README.pt-BR.md">Português</a>
+</p>
+
+
 **AI-Guided Software Engineering Framework**
 
 > Specify. Architect. Build. Validate. Evolve.
@@ -93,6 +108,20 @@ Read the [developer guide and worked example](docs/developer-guide.md).
 Copyright (c) 2026 Alexsand Farias de Souza. SPECTION is released under the [MIT License](LICENSE), allowing use, modification and distribution, including commercial use, subject to retaining the copyright and permission notice. See [Copyright and Attribution](COPYRIGHT.md) for third-party licensing, contributions, AI-assisted material and trademark guidance.
 
 SPECTION is an independent project inspired by established software engineering practices and GitHub Spec Kit. It is not an official GitHub product or endorsed implementation.
+
+## Examples and learning paths
+
+- [Booking API: conventional software](examples/README.md#1-booking-api-conventional-software)
+- [AI document assistant: RAG and evaluation](examples/README.md#2-ai-document-assistant)
+- [Adopting SPECTION in existing applications](examples/README.md#3-existing-application)
+
+See the [complete examples catalog](examples/README.md) and the [developer manual](docs/developer-guide.md).
+
+## Ethical and responsible use
+
+SPECTION prioritizes human accountability, privacy, security, accessibility, fairness, transparency and intellectual property. Use AI to assist engineering, not to bypass approval or fabricate evidence. Review foreseeable harms, enforce least privilege, measure actual results, and keep a human responsible for consequential decisions.
+
+Read the [Ethical and Responsible Use guide](docs/ethical-use.md), including the release checklist. These guidelines do not modify the MIT license.
 
 ## Scope and limitations
 
