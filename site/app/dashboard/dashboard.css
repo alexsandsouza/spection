@@ -3,3 +3,22 @@
 
 /* Dashboard 2.1 workspace controls and accessible diagram viewer */
 .eng-project-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.eng-project-actions button{font-size:12px;padding:8px 7px;min-height:40px;text-align:center}.eng-project-actions button:last-child{grid-column:1/-1}.eng-danger{border-color:#b94d56!important;color:#c8464f!important}.eng-danger:hover{background:rgba(200,55,70,.09)!important}.eng-sidebar select{overflow:hidden;text-overflow:ellipsis}.eng-diagram{position:relative;padding:0;isolation:isolate}.eng-diagram-toolbar{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap;padding:10px 12px;background:var(--panel);border-bottom:1px solid var(--line)}.eng-diagram-toolbar strong{margin-right:auto}.eng-diagram-toolbar button{min-height:36px;padding:6px 11px;border-radius:8px}.eng-diagram-toolbar span{font-variant-numeric:tabular-nums;font-size:13px;color:var(--muted)}.eng-diagram-scroll{height:400px;overflow:auto;padding:12px;background:var(--bg)}.eng-diagram-expanded{position:fixed;inset:16px;z-index:1000;background:var(--panel);box-shadow:0 30px 100px #0008;display:flex;flex-direction:column;max-width:none;overflow:hidden}.eng-diagram-expanded .eng-diagram-scroll{height:calc(100vh - 110px);flex:1}.eng-diagram-expanded iframe{min-height:600px}@media(max-width:900px){.eng-project-actions{grid-column:1/-1}.eng-diagram-expanded{inset:4px}.eng-diagram-toolbar{gap:4px}.eng-diagram-toolbar button{font-size:12px;padding:6px 8px}}
+
+/* Dashboard 2.2: one scroll region, centered architecture and focus-visible controls */
+.eng-diagram{overflow:visible;isolation:auto}
+.eng-diagram-toolbar{position:relative;z-index:2}
+.eng-diagram-scroll{height:440px;min-width:0;max-width:100%;overflow:auto;padding:0;overscroll-behavior:contain;scrollbar-gutter:stable}
+.eng-diagram-stage{display:flex;align-items:center;justify-content:center;margin:0;min-width:100%;min-height:100%}
+.eng-diagram-expanded{position:fixed;inset:12px;z-index:1200;display:flex;flex-direction:column;overflow:hidden;max-width:none;box-shadow:0 30px 100px #0009}
+.eng-diagram-expanded .eng-diagram-scroll{height:auto;min-height:0;flex:1;overflow:auto}
+.eng-diagram-expanded iframe{min-height:0}
+.eng-diagram :is(button,[tabindex]):focus-visible,.eng-sidebar :is(button,select):focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.eng-diagram-toolbar button:disabled{opacity:.45;cursor:not-allowed}
+.eng-notice{display:flex;gap:12px;justify-content:space-between;align-items:start;border:1px solid var(--line);background:var(--panel);padding:12px 14px;border-radius:12px;margin:14px 0}
+.eng-notice p{margin:0;min-width:0;overflow-wrap:anywhere}
+.eng-notice[data-kind="error"]{border-color:#d97b80}
+.eng-notice[data-kind="success"]{border-color:#42a999}
+.eng-notice button{min-width:40px;min-height:36px}
+.eng-project-actions button{transition:background .18s ease,border-color .18s ease}
+@media(max-width:900px){.eng-diagram-expanded{inset:4px}.eng-diagram-scroll{height:360px}}
+@media(prefers-reduced-motion:reduce){.eng-project-actions button{transition:none}}
