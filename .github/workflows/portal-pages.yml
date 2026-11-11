@@ -33,6 +33,12 @@ jobs:
       - name: Typecheck
         working-directory: site
         run: npm run typecheck
+      - name: Verify exported routes
+        working-directory: site
+        run: |
+          test -s out/index.html
+          test -s out/builder/index.html
+          test -s out/dashboard/index.html
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
