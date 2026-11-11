@@ -15,7 +15,7 @@ export function validate(w){
  return w;
 }
 export function slug(name){return String(name).normalize("NFKD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,64)||"project"}
-export function uniqueId(list){let id;do{id="proj-"+globalThis.crypto?.randomUUID?.()||("proj-"+Math.random().toString(36).slice(2)+Date.now().toString(36))}while(list.some(p=>p.id===id));return id}
+export function uniqueId(list){let id;do{id="proj-"+(globalThis.crypto?.randomUUID?.()||Math.random().toString(36).slice(2)+Date.now().toString(36))}while(list.some(p=>p.id===id));return id}
 export function migrateProjects(input){if(!Array.isArray(input)||input.length>20)throw Error("Invalid projects");
  const used=new Set();return input.map((item,index)=>{const w=validate(item);let id=typeof item.id==="string"&&/^proj-[a-zA-Z0-9-]{8,}$/.test(item.id)&&!used.has(item.id)?item.id:"proj-legacy-"+String(index+1).padStart(3,"0");used.add(id);return {...w,id,archived:item.archived===true}});
 }
