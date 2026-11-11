@@ -203,3 +203,7 @@ SPECTION is an independent project informed by established software engineering 
 [Back to top](#spection) · [Português (Brasil)](docs/README.pt-BR.md) · [Official website](https://alexsandsouza.github.io/spection/)
 
 </div>
+
+## SPECTION Academic Lab
+
+Follow the [Academic Lab](lab/README.md), a demonstrative project with a documented first feature and actual local test evidence. Staged inside this repository pending separate repository creation. [Live Project](https://alexsandsouza.github.io/spection/#live-project).
