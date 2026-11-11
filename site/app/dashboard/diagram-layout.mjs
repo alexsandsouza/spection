@@ -1,5 +1,5 @@
 export function dimensions(svg){
- const vb=svg.match(/\bviewBox=["']\s*([\d.]+)[,\s]+([\d.]+)[,\s]+([\d.]+)[,\s]+([\d.]+)\s*["']/i);
+ const vb=svg.match(/\bviewBox=["']\s*([-+\d.eE]+)[,\s]+([-+\d.eE]+)[,\s]+([-+\d.eE]+)[,\s]+([-+\d.eE]+)\s*["']/i);
  if(!vb)return {width:900,height:600};
  const width=Number(vb[3]),height=Number(vb[4]);
  return Number.isFinite(width)&&Number.isFinite(height)&&width>0&&height>0?{width:Math.min(width,10000),height:Math.min(height,10000)}:{width:900,height:600};
