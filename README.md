@@ -208,6 +208,6 @@ SPECTION is an independent project informed by established software engineering 
 
 Follow the [Academic Lab](https://github.com/alexsandsouza/spection-academic-lab), a demonstrative project with a documented first feature and actual local test evidence. The independent repository is published; the original lab folder is retained as a historical baseline. [Live Project](https://alexsandsouza.github.io/spection/#live-project).
 
-## Engineering Dashboard
+## Engineering Dashboard 2.1
 
-[Open the dashboard](https://alexsandsouza.github.io/spection/dashboard/) to import a Builder ZIP, review requirements, manage tasks and record manual evidence. [SDD specification](specs/portal/engineering-dashboard.md). Session-only workspace; export JSON before leaving.
+[Open the dashboard](https://alexsandsouza.github.io/spection/dashboard/) to import a Builder ZIP, manage multiple projects with stable IDs, review requirements, move Kanban tasks, inspect architecture diagrams, record manual evidence, and export named JSON snapshots. [SDD specification](specs/portal/engineering-dashboard.md). Session-only by default; optional browser storage with revocation. Export JSON before leaving.
