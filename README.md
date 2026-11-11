@@ -206,4 +206,4 @@ SPECTION is an independent project informed by established software engineering 
 
 ## SPECTION Academic Lab
 
-Follow the [Academic Lab](lab/README.md), a demonstrative project with a documented first feature and actual local test evidence. Staged inside this repository pending separate repository creation. [Live Project](https://alexsandsouza.github.io/spection/#live-project).
+Follow the [Academic Lab](https://github.com/alexsandsouza/spection-academic-lab), a demonstrative project with a documented first feature and actual local test evidence. The independent repository is published; the original lab folder is retained as a historical baseline. [Live Project](https://alexsandsouza.github.io/spection/#live-project).
