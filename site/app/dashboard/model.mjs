@@ -14,4 +14,10 @@ export function validate(w){
  for(const a of [w.requirements,w.tasks,w.evidence])if(new Set(a.map(x=>x.id)).size!==a.length)throw Error("Duplicate IDs");
  return w;
 }
+export function slug(name){return String(name).normalize("NFKD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,64)||"project"}
+export function uniqueId(list){let id;do{id="proj-"+globalThis.crypto?.randomUUID?.()||("proj-"+Math.random().toString(36).slice(2)+Date.now().toString(36))}while(list.some(p=>p.id===id));return id}
+export function migrateProjects(input){if(!Array.isArray(input)||input.length>20)throw Error("Invalid projects");
+ const used=new Set();return input.map((item,index)=>{const w=validate(item);let id=typeof item.id==="string"&&/^proj-[a-zA-Z0-9-]{8,}$/.test(item.id)&&!used.has(item.id)?item.id:"proj-legacy-"+String(index+1).padStart(3,"0");used.add(id);return {...w,id,archived:item.archived===true}});
+}
+export function sameProject(a,b){return a.id===b.id}
 export function gaps(w){return w.requirements.filter(r=>!r.reviewed||!w.tasks.some(t=>t.requirement===r.id&&t.status==="done")||!w.evidence.some(e=>e.requirement===r.id&&e.text.trim()&&e.test.trim()));}
