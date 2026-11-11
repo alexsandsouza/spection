@@ -10,3 +10,4 @@ export function slug(name:string):string;
 export function uniqueId(list:Workspace[]):string;
 export function migrateProjects(input:unknown):Workspace[];
 export function sameProject(a:Workspace,b:Workspace):boolean;
+export function duplicateProject(projects:Workspace[],candidate:Workspace,skipId?:string):boolean;
