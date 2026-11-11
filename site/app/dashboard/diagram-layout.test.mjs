@@ -8,3 +8,4 @@ test("Fit respects both available dimensions",()=>{
  assert.equal(fitScale({width:500,height:200},{width:1032,height:600}),2);
 });
 test("Sizing maps zoom without introducing inner scrolling",()=>assert.deepEqual(scaleDimensions({width:600,height:800},1.25),{width:750,height:1000}));
+test("Mermaid negative viewBox origins are supported",()=>assert.deepEqual(dimensions('<svg viewBox="-8 -8 300.5 600.25"></svg>'),{width:300.5,height:600.25}));
