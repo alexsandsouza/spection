@@ -29,3 +29,6 @@ TASK-DASH-001 specification; TASK-DASH-002 parser and model; TASK-DASH-003 UI; T
 
 ## Quality and evidence
 Run node --test site/app/dashboard/model.test.mjs and portal build/typecheck. CI and browser deployment must be independently confirmed. Human release approval pending.
+
+## Dashboard 2.0 increment
+RF-DASH-009 multiple workspaces (maximum 20); RF-DASH-010 explicit local storage opt-in and revocation; RF-DASH-011 accessible file selection plus drop; RF-DASH-012 Kanban drag and select; RF-DASH-013 Mermaid preview in sandboxed iframe with strict rendering; RF-DASH-014 responsive sidebar and language controls. ADR: retain session state by default, optional browser storage, no backend. Acceptance: import two projects, edit and switch without data loss, reload only after opt-in, revoke and clear saved state, move task by both controls, render valid Mermaid block, preserve Builder. Browser and CI verification pending.
