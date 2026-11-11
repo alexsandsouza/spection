@@ -1,4 +1,4 @@
-import {test} from "node:test";import assert from "node:assert/strict";import {fromDocs,validate,gaps,slug,uniqueId,migrateProjects,sameProject} from "./model.mjs";
+import {test} from "node:test";import assert from "node:assert/strict";import {fromDocs,validate,gaps,slug,uniqueId,migrateProjects,sameProject,duplicateProject} from "./model.mjs";
 test("Builder contract",()=>{const w=fromDocs({"README.md":"# Demo","docs/prd.md":"- RF-001: Register\n- RNF-001: Privacy","specs/001-feature/tasks.md":"- [ ] TASK-001: Implement"});assert.equal(w.requirements.length,2);assert.equal(w.tasks.length,1);assert.equal(gaps(w).length,2);assert.equal(validate(w),w)});
 test("Missing PRD rejected",()=>assert.throws(()=>fromDocs({})));
 test("Invalid snapshot rejected",()=>assert.throws(()=>validate({title:"x"})));
@@ -30,3 +30,19 @@ test("Export filename slug is safe and consistent",()=>{
  assert.match(uniqueId([]),/^proj-[a-z0-9-]{8,}$/i);
 });
 test("Invalid old project payload is rejected",()=>assert.throws(()=>migrateProjects([{title:"Invalid"}])));
+
+test("Duplicate imports match by title and by stable ID",()=>{
+ const a={...fromDocs({"README.md":"# Library Manager","docs/prd.md":"- RF-001: Test"}),id:"proj-library-123"};
+ const b={...a,id:"proj-another-456",title:"library manager"};
+ assert.equal(duplicateProject([a],b),true);
+ assert.equal(duplicateProject([a],{...a,title:"Changed title"}),true);
+ assert.equal(duplicateProject([a],b,a.id),false);
+ assert.equal(duplicateProject([a],{...b,title:"Events Manager"}),false);
+});
+test("Legacy ID collisions are resolved",()=>{
+ const d={"docs/prd.md":"- RF-001: Test"};
+ const a={...fromDocs(d),id:"proj-legacy-002"};
+ const b={...fromDocs(d)};
+ const c=migrateProjects([a,b]);
+ assert.notEqual(c[0].id,c[1].id);
+});
