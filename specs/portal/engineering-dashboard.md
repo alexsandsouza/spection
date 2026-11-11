@@ -68,3 +68,35 @@ Source changes published to main. Model helper exercised with representative inp
 
 ### Verification update
 On 2026-11-10, eleven model assertions were exercised in the tool runtime and passed, covering Builder parsing, missing PRD, malformed snapshots, evidence gaps, legacy migration, duplicate IDs/names, and export filename slug. CI/Next.js build and browser regression remain pending. Static source changes are committed to main; GitHub Pages deployment state has not been independently verified.
+
+## Dashboard 2.2 - FEAT-PORTAL-010
+
+### Product Brief
+Improve the validated Dashboard 2.1 experience for diagram exploration and day-to-day project management without modifying Builder exports, Academic Lab, or persisted workspaces.
+
+### PRD / Acceptance criteria
+- RF-DASH-022: Mermaid preview is centered within the available viewport at any supported viewport width.
+- RF-DASH-023: Fit-to-view calculates an actual scale from the SVG viewBox and available width and height. Zoom in/out remains possible from fitted scale.
+- RF-DASH-024: Expand uses the available screen and Escape closes; scroll takes place in the diagram viewport, not inside the rendered SVG iframe.
+- RF-DASH-025: Project actions provide localized and dismissible success, error, and information notices; a prior duplicate warning is cleared after a successful action.
+- RF-DASH-026: Switching projects clears stale notices and shows the selected project's current data.
+- RNF-DASH-013: SVG remains in a script-restricted sandbox with a restrictive Content Security Policy; never execute imported Mermaid source.
+- RNF-DASH-014: No schema or storage-key changes; existing JSON workspaces remain importable, project IDs and archiving states are preserved.
+- RNF-DASH-015: Keyboard focus is visible, zoom controls are labeled, and expanded viewer supports Escape and page scroll locking.
+
+### HLD / LLD
+Mermaid Markdown source -> strict Mermaid renderer -> serialized SVG -> sandboxed iframe with scroll disabled. A pure sizing module parses the SVG viewBox and fits it into the observed parent viewport. Outer scroll container owns both axes. Diagram expands as a fixed-size dialog; ResizeObserver recalculates the fitted scale. UI stores an optional manual zoom override, reset by Fit. Notifications use explicit state (kind/message), are dismissible and are updated on project actions.
+
+### ADR-0022
+Keep sandboxed SVG iframe instead of injecting SVG into host DOM. One parent overflow container avoids nested scrollbars, while a fixed SVG-sized iframe and centered stage preserve diagram geometry. Avoid changing project serialization to maintain compatibility with existing users' files.
+
+### Tasks and Quality Gates
+- TASK-DASH-022: Add pure diagram layout functions and unit tests.
+- TASK-DASH-023: Replace diagram viewer sizing and expand behavior.
+- TASK-DASH-024: Add localized project action notices and stale-message cleanup.
+- TASK-DASH-025: Refine responsive CSS and focus states.
+- TASK-DASH-026: Extend GitHub Actions tests and verify static site build.
+- TASK-DASH-027: Test Library Manager, Events Manager, privacy revocation, and Mermaid zoom on desktop/mobile.
+
+### Evidence
+Model checks: 11/11 passed in JavaScript evaluation. Diagram sizing checks: 4/4 passed in JavaScript evaluation. These are local tool-runtime assertions, not a claim of completed browser tests or CI. The GitHub Pages workflow now runs both test suites before build. Build/typecheck, deployment success, and visual/keyboard regression await independent confirmation.
