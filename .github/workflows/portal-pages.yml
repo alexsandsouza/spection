@@ -24,7 +24,7 @@ jobs:
         run: npm install
       - name: Dashboard model tests
         working-directory: site
-        run: node --test app/dashboard/model.test.mjs
+        run: node --test app/dashboard/model.test.mjs app/dashboard/diagram-layout.test.mjs
       - name: Build
         working-directory: site
         env:
