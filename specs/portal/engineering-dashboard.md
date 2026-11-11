@@ -65,3 +65,6 @@ Retain Next.js static export, React browser state and JSZip adapter. Project ide
 
 ### Status
 Source changes published to main. Model helper exercised with representative input. CI results, deploy and end-to-end interaction confirmation pending. Human approval pending.
+
+### Verification update
+On 2026-11-10, eleven model assertions were exercised in the tool runtime and passed, covering Builder parsing, missing PRD, malformed snapshots, evidence gaps, legacy migration, duplicate IDs/names, and export filename slug. CI/Next.js build and browser regression remain pending. Static source changes are committed to main; GitHub Pages deployment state has not been independently verified.
